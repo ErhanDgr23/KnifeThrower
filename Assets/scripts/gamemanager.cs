@@ -13,7 +13,7 @@ public class gamemanager : MonoBehaviour {
     public float skor, money;
 
     [SerializeField] GameObject failedpanel, succespanel;
-    [SerializeField] TextMeshProUGUI stage1, stage2, moneymenu, moneyt, moneyenvi, skort;
+    [SerializeField] TextMeshProUGUI stage1, stage2, moneymenu, moneyt, moneyenvi, skort, bestskort, levelt;
 
     [HideInInspector] public knifesc bicak;
 
@@ -53,6 +53,7 @@ public class gamemanager : MonoBehaviour {
         winfailpanelcounteiner sc = succespanel.GetComponent<winfailpanelcounteiner>();
         sc.skor.text = skor.ToString();
         sc.money.text = money.ToString();
+        PlayerPrefs.SetFloat("level", PlayerPrefs.GetFloat("level") + 1f);
         bicakatabilir = false;
     }
 
@@ -69,6 +70,11 @@ public class gamemanager : MonoBehaviour {
         moneyenvi.text = PlayerPrefs.GetFloat("money").ToString();
         moneyt.text = PlayerPrefs.GetFloat("money").ToString();
         skort.text = skor.ToString();
+        bestskort.text = PlayerPrefs.GetFloat("bestskor").ToString();
+        levelt.text = PlayerPrefs.GetFloat("level").ToString();
+
+        if (PlayerPrefs.GetFloat("bestskor") < skor)
+            PlayerPrefs.SetFloat("bestskor", skor);
 
         if (!oyunbasladi)
             return;

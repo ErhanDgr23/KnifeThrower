@@ -6,10 +6,19 @@ using TMPro;
 
 public class menumanager : MonoBehaviour {
 
+    public static menumanager menumanagersc;
+
+    public Button buttonfailed;
+    public Button button2x;
     public GameObject[] guns;
     public GameObject[] enviromentparents;
 
     [SerializeField] int envivalue;
+
+    private void Awake()
+    {
+        menumanagersc = this;
+    }
 
     void Start()
     {

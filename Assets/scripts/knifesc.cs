@@ -54,7 +54,7 @@ public class knifesc : MonoBehaviour {
         knifespawnersc.bicakspawnla();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (atildi)
         {
@@ -113,9 +113,9 @@ public class knifesc : MonoBehaviour {
             rb.isKinematic = true;
             transform.SetParent(other.transform);
             Invoke("particlekapa", 0.2f);
-            PlayerPrefs.SetFloat("money", PlayerPrefs.GetFloat("money") + 20f);
+            PlayerPrefs.SetFloat("money", PlayerPrefs.GetFloat("money") + 10f);
             managersc.skor += 50f;
-            managersc.money += 20f;
+            managersc.money += 10f;
             temas = true;
             ontime = true;
 

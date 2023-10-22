@@ -48,7 +48,7 @@ public class treelayersc : MonoBehaviour {
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (canvalue <= 0f)
         {
@@ -65,7 +65,7 @@ public class treelayersc : MonoBehaviour {
         {
             if (speedmain != speeds[(int)rdm])
             {
-                speedmain = Mathf.MoveTowards(speedmain, speeds[(int)rdm], 0.2f);
+                speedmain = Mathf.MoveTowards(speedmain, speeds[(int)rdm], 0.8f);
             }
 
             if (hardmode)
@@ -80,7 +80,7 @@ public class treelayersc : MonoBehaviour {
 
                 if (speedmain != speeds[(int)rdm])
                 {
-                    speedmain = Mathf.MoveTowards(speedmain, speeds[(int)rdm], 0.2f);
+                    speedmain = Mathf.MoveTowards(speedmain, speeds[(int)rdm], 0.8f);
                 }
             }
 

@@ -29,7 +29,7 @@ public class knifethrower : MonoBehaviour {
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         zmn += Time.deltaTime;
     }
