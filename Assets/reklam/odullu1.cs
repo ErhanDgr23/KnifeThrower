@@ -12,7 +12,7 @@ public class odullu1 : MonoBehaviour {
     [SerializeField] Button but;
     [SerializeField] bool b2x, odulverildi;
 
-    private string _adUnitId = "";
+    private string _adUnitId = "ca-app-pub-6299849283659692/5205947459";
 
     private RewardedAd _rewardedAd;
 

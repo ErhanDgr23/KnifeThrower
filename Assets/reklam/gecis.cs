@@ -8,7 +8,7 @@ public class gecis : MonoBehaviour {
 
     public static gecis instance;
 
-    private string _adUnitId = "";
+    private string _adUnitId = "ca-app-pub-6299849283659692/1576875399";
 
     [SerializeField] bool initilazed;
     [SerializeField] float zmn, cooldown;
